@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Vue Hello</title>
+</head>
+<body>
+    
+    <div id="root">
+
+        <div class="input_box">
+
+            <div>
+
+                <label for="input">Nome:</label>
+                <input type="text" v-model="nome">
+
+            </div>
+
+            <div>
+
+                <label for="input">Cognome:</label>
+                <input type="text" v-model="cognome">
+
+            </div>
+
+        </div>
+
+        <div class="h1_box">
+
+            <h1 :class="classi">Ciao {{nome}} {{cognome}}</h1>
+
+        </div>
+
+        <div class="buttons_box">
+
+            <button @click="saluta">Se clicchi ti saluto!</button>
+
+        
+            <button @click="ricolora">Ricolora il titolo!</button>
+
+        </div>
+        
+
+        <div class="img_box">
+
+            <div class="img_cont">
+                <img :src="immagine">
+                <div class="description_box">
+                    <p>ILYA YEFIMOVICH REPIN - I battellieri del Volga</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
